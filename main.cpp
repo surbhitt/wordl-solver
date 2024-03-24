@@ -1,5 +1,4 @@
 #include <iostream>
-#include <numeric>
 #include <string>
 using namespace std;
 // go through every word in a list of ans
