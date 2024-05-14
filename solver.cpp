@@ -1,5 +1,7 @@
+#ifdef _GTEST
 #include <gtest/gtest.h>
-#include <gtest/gtest_prod.h>
+#endif
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -69,7 +71,13 @@ class Wordl {
         }
     }
 
+#ifdef _GTEST
     friend class Wordl_Test;
     FRIEND_TEST(Wordl_Test, CheckAllMatch);
+    FRIEND_TEST(Wordl_Test, CheckOneNomatch);
+    FRIEND_TEST(Wordl_Test, CheckAllNomatch);
+    FRIEND_TEST(Wordl_Test, CheckAllMisplaced);
+    FRIEND_TEST(Wordl_Test, Check1Mp1M);
     FRIEND_TEST(Wordl_Test, Check1Mp1Nm);
+#endif
 };
